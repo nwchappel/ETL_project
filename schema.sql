@@ -36,4 +36,11 @@ CREATE TABLE housing (
 );
 
 select * from school;
+select * from offense_codes;
+select * from crime;
+select * from housing;
 
+SELECT c.incident_number, c.offense_code, oc.name, c.date, c.street, c.longitude, c.latitude
+FROM crime AS c
+JOIN offense_codes AS oc
+ON c.offense_code= oc.offense_code;
